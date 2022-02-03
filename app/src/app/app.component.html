@@ -1,0 +1,50 @@
+<div class="container-sm, bg-primary">
+
+  <div class="row">
+      <div class="col-sm-12, text-center">
+        <h1>Converter</h1>
+        <span class="align-middle">
+          <label for="cost">Cost</label><br>
+          <input class="form-control, text-center" type="text" id="cost" name="cost" placeholder={{cost}} [(ngModel)]="cost" >
+        </span>
+      </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="text-center"> 
+        <label for="fname">From</label><br>
+        <select  class="form-select" name="units" id="fUnit" [(ngModel)]="from">
+          <option value="Dollar">Dollar</option>
+          <option value="Euro">Euro</option>
+          <option value="Sterling">Sterling</option>
+          <option value="Turkish Lira">Turkish Lira</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="text-center">
+        <label for="sUnit">To</label><br>
+        <select  class="form-select" name="units" id="sUnit" [(ngModel)]="to">
+          <option value="Dollar">Dollar</option>
+          <option value="Euro">Euro</option>
+          <option value="Sterling">Sterling</option>
+          <option value="Turkish Lira">Turkish Lira</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12, text-center">
+        <br>
+        <button class="btn btn-dark" (click)="convert(from, to, cost)">Convert</button>
+        <br>
+        <span class="align-middle">
+          <br>
+          <p class="Display-2">Result:  {{cost}} {{from}}s equals {{result}} {{to}}s</p>
+        </span>
+      </div>
+  </div>
+ 
+</div>
